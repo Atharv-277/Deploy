@@ -14,9 +14,18 @@ const defaultFeatures = [
   "Low Power Consumption",
   "IP54 (Optional)",
 ];
-
+{/*Starts */}
 const defaultBenefitsHeading = "Features & Benefits";
 
+const transformBrochureUrl = (url) => {
+  if (!url) return url;
+  // If URL contains localhost, replace it with production API URL
+  if (url.includes("localhost")) {
+    return url.replace(/https?:\/\/localhost:\d+/, API_BASE_URL);
+  }
+  return url;
+};
+{/*Ends */}
 const defaultBenefits = [
   {
     icon: "display",
@@ -531,7 +540,7 @@ export default function ProductDetails({
                 <>
                   {draft.brochureUrl ? (
                     <a
-                      href={draft.brochureUrl}
+                      href={transformBrochureUrl(draft.brochureUrl)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`${actionBtnBase} bg-slate-900 text-white hover:bg-slate-800`}
