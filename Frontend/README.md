@@ -1,16 +1,28 @@
-# React + Vite
+# Frontend Deployment Notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Production API URL
 
-Currently, two official plugins are available:
+This frontend reads backend URL from `VITE_API_BASE_URL`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Production default in this repo is set in `.env.production`:
 
-## React Compiler
+`VITE_API_BASE_URL=https://a2k-v1-0.onrender.com`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+You can still override it in your hosting provider environment settings.
 
-## Expanding the ESLint configuration
+## Build Commands
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Install: `npm install`
+- Build: `npm run build`
+- Output directory: `dist`
+
+## SPA Routing (Important)
+
+This app uses React Router (`BrowserRouter`).
+Your static host must rewrite all non-file routes to `index.html`.
+
+Examples:
+
+- Netlify: `_redirects` with `/* /index.html 200`
+- Vercel: rewrite config in `vercel.json`
+- Nginx: `try_files $uri /index.html;`

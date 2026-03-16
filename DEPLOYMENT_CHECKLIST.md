@@ -13,6 +13,9 @@
 ### Frontend (`Frontend/.env`)
 - `VITE_API_BASE_URL` (must point to deployed backend URL)
 
+Current backend URL:
+- `https://a2k-v1-0.onrender.com`
+
 ## 2) Build & Run Validation
 
 ### Backend
