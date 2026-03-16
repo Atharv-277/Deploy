@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="ledGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f3ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9d5ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#ledGrad4)"/>
+  
+  <!-- Large LED wall -->
+  <rect x="60" y="40" width="280" height="150" rx="6" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <rect x="70" y="50" width="260" height="130" rx="3" fill="#a78bfa"/>
+  
+  <!-- Event/concert vibe -->
+  <text x="200" y="100" font-family="Arial" font-size="32" fill="#fff" text-anchor="middle" font-weight="bold">EVENT</text>
+  <text x="200" y="130" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">DISPLAY</text>
+  
+  <!-- Audience silhouettes -->
+  <ellipse cx="100" cy="210" rx="15" ry="20" fill="#64748b"/>
+  <ellipse cx="150" cy="210" rx="15" ry="20" fill="#64748b"/>
+  <ellipse cx="200" cy="210" rx="15" ry="20" fill="#64748b"/>
+  <ellipse cx="250" cy="210" rx="15" ry="20" fill="#64748b"/>
+  <ellipse cx="300" cy="210" rx="15" ry="20" fill="#64748b"/>
+  
+  <text x="200" y="255" font-family="Arial" font-size="16" fill="#1a202c" text-anchor="middle" font-weight="bold">Events & Venues</text>
+  <text x="200" y="280" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Perfect for Large Displays</text>
+</svg>

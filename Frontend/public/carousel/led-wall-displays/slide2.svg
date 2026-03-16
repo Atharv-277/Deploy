@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="ledGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef9c3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fef08a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#ledGrad2)"/>
+  
+  <!-- LED wall in bright environment -->
+  <rect x="90" y="60" width="220" height="120" rx="6" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <rect x="100" y="70" width="200" height="100" rx="3" fill="#fbbf24"/>
+  
+  <!-- Sun -->
+  <circle cx="300" cy="50" r="25" fill="#fbbf24"/>
+  <circle cx="300" cy="50" r="35" fill="url(#sunGlow)" opacity="0.6"/>
+  
+  <!-- Sun rays -->
+  <line x1="300" y1="15" x2="300" y2="5" stroke="#f59e0b" stroke-width="3"/>
+  <line x1="325" y1="25" x2="332" y2="18" stroke="#f59e0b" stroke-width="3"/>
+  <line x1="335" y1="50" x2="345" y2="50" stroke="#f59e0b" stroke-width="3"/>
+  
+  <!-- Check mark for visibility -->
+  <circle cx="350" cy="120" r="20" fill="#22c55e"/>
+  <path d="M 342 120 L 348 126 L 358 114" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <text x="200" y="220" font-family="Arial" font-size="16" fill="#1a202c" text-anchor="middle" font-weight="bold">High Brightness</text>
+  <text x="200" y="245" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Outdoor Visibility</text>
+</svg>
