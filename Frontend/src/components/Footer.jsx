@@ -51,7 +51,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-slate-400">
-              <li>Pune, Maharashtra</li>
+              <li>33/6/2, Lane 9 , Chandrabhaga Nagar, Dhankawadi, <br />Pune, Maharashtra 411046</li>
               <li>+91 8668223495</li>
               <li>contact@a2kscreens.in</li>
             </ul>

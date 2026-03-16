@@ -255,9 +255,12 @@ export default function Navbar() {
               </Link>
               <button
                 className="px-6 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-500 shadow-md"
-                onClick={() => { setMobileMenuOpen(false); }}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  navigate("/start-advertising");
+                }}
               >
-                Get Quote
+                Start Advertising
               </button>
             </div>
           </div>

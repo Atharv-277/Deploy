@@ -175,7 +175,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900">Headquarters</h4>
-                  <p className="text-slate-600 text-sm mt-1 leading-relaxed">Tech Park, Phase 1<br/>Pune, Maharashtra, India</p>
+                  <p className="text-slate-600 text-sm mt-1 leading-relaxed">33/6/2, Lane 9 , Chandrabhaga Nagar, Dhankawadi, <br/>Pune, Maharashtra 411046</p>
                 </div>
               </div>
 

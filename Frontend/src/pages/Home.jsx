@@ -487,11 +487,11 @@ export default function Home({ isAdminMode = false }) {
                 {/* Matte Black Bezel */}
                 <div className="relative bg-black rounded-[2rem] p-[4px] shadow-[0_30px_60px_rgba(0,0,0,0.35)]">
                   {/* Screen Area */}
-                  <div
-                    className={`relative rounded-[1.5rem] overflow-hidden transition-all duration-700 ${
-                      fade ? "opacity-100 scale-100" : "opacity-0 scale-[1.01]"
-                    } w-[calc(100vw-3rem)] h-[56vw] sm:w-[420px] sm:h-[240px] md:w-[640px] md:h-[360px]`}
-                  >
+                 <div
+  className={`relative rounded-[1.5rem] overflow-hidden transition-all duration-700 ${
+    fade ? "opacity-100 scale-100" : "opacity-0 scale-[1.01]"
+  } w-full max-w-[640px] aspect-video`}
+>
                     {currentItem.type === "image" ? (
                       <img
                         src={currentItem.src}
@@ -578,8 +578,7 @@ export default function Home({ isAdminMode = false }) {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-[1fr_1.1fr] gap-10 md:gap-16 items-center">
           {" "}
           {/* LEFT SIDE – WALL TV */}
-          <div className="relative flex justify-center md:justify-start items-start pt-12 pb-16 md:pt-24 md:pb-32 ml-0 md:-ml-12">
-            <div
+<div className="relative flex justify-center md:justify-end w-full">            <div
               className="absolute w-full max-w-[560px] h-[315px] 
   bg-black/40 blur-2xl translate-y-10 rounded-lg hidden md:block"
             ></div>
