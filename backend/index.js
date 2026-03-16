@@ -23,7 +23,9 @@ const frontendOrigins = String(process.env.FRONTEND_URL || "")
   .filter(Boolean);
 
 if (isProduction && frontendOrigins.length === 0) {
-  throw new Error("FRONTEND_URL is required in production environment.");
+  console.warn(
+    "FRONTEND_URL is not set. Allowing all origins temporarily; set FRONTEND_URL to lock down CORS."
+  );
 }
 
 validateAdminAuthConfig();
@@ -39,7 +41,7 @@ app.use(
         return;
       }
 
-      if (!isProduction && frontendOrigins.length === 0) {
+      if (frontendOrigins.length === 0) {
         callback(null, true);
         return;
       }
