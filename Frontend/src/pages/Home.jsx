@@ -975,11 +975,33 @@ export default function Home({ isAdminMode = false }) {
       {/* Client Logos Trust Strip */}
       <section className="py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-sm uppercase tracking-widest text-slate-400 font-medium mb-10">
+          <p className="text-center text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-widest text-slate-400 font-medium mb-8 sm:mb-10">
             Trusted by leading brands across India
           </p>
           <div className="relative">
-            <div className="flex animate-marquee gap-16 items-center">
+            {/* Mobile/tablet: wrapped layout to avoid overflow */}
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:hidden">
+              {[
+                "Apollo Hospitals",
+                "Reliance retail",
+                "DMart",
+                "Haldiram's",
+                "PhysicsWallah",
+                "Infosys",
+              ].map((name, i) => (
+                <div
+                  key={i}
+                  className="px-4 py-2 sm:px-5 sm:py-2.5 bg-slate-50 rounded-lg border border-slate-200 max-w-full"
+                >
+                  <span className="text-slate-500 font-semibold text-sm sm:text-base break-words text-center block">
+                    {name}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop: marquee strip */}
+            <div className="hidden md:flex animate-marquee gap-16 items-center">
               {[
                 "Apollo Hospitals",
                 "Reliance retail",
