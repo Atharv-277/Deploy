@@ -38,7 +38,7 @@ export default function Manufacturing() {
       <img
         src={iman}
         alt="Digital dashboards on factory floor"
-        className="w-full h-[520px] object-cover"
+        className="w-full h-[300px] sm:h-[380px] md:h-[520px] object-cover"
       />
 
       {/* CTA Button */}

@@ -31,7 +31,7 @@ export default function Retail() {
       <img
         src={ire}
         alt="Retail digital displays"
-        className="w-full h-[520px] object-cover transition duration-700 hover:scale-105"
+        className="w-full h-[300px] sm:h-[380px] md:h-[520px] object-cover transition duration-700 hover:scale-105"
       />
 
       <div className="absolute bottom-8 right-8">

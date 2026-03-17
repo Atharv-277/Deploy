@@ -38,7 +38,7 @@ export default function Banking() {
       <img
         src={iban}
         alt="Digital banking kiosk inside bank branch"
-        className="w-full h-[520px] object-cover"
+        className="w-full h-[300px] sm:h-[380px] md:h-[520px] object-cover"
       />
 
       {/* CTA Button */}
