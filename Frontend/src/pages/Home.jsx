@@ -15,10 +15,7 @@ import { adminFetch } from "../utils/adminAuth";
 import { API_BASE_URL } from "../config/api";
 
 //import p1 from "../assets/hero/p1.jpg";
-import p2 from "../assets/hero/p2.jpg";
 //import p3 from "../assets/hero/p3.jpg";
-import p4 from "../assets/hero/p4.jpg";
-import v1 from "../assets/hero/v1.mp4";
 import v2 from "../assets/hero/v2.mp4";
 // import m1 from "../assets/hero/m1.jpg";
 // import m2 from "../assets/hero/m2.jpg";
@@ -49,14 +46,11 @@ const defaultHeroDescription =
 
 const media = [
   { type: "image", src: retail },
-  { type: "video", src: v1 },
   { type: "video", src: v2 },
   { type: "video", src: v3 },
-  { type: "image", src: p2 },
   { type: "video", src: v4 },
   { type: "image", src: r1 },
   { type: "video", src: v5 },
-  { type: "image", src: p4 },
 ];
 
 const defaultNewsItems = [

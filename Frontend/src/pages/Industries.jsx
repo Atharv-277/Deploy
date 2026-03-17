@@ -1,20 +1,27 @@
-import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import o1 from "../assets/hero/o1.jpg"
+import retail from "../assets/hero/retail.jpg"
+import r2 from "../assets/hero/r2.jpg"
+import man from "../assets/hero/man.jpg"
+import h1 from "../assets/hero/h1.jpg"
+import a1 from "../assets/hero/a1.jpg"
+import e1 from "../assets/hero/e1.jpg"
+import b1 from "../assets/hero/b1.jpg"
+import g1 from "../assets/hero/g1.jpg"
+import bank1 from "../assets/hero/bank1.jpg"
 
 const industries = [
   {
     title: "Corporate / Office",
     desc: "Enhance internal communication with lobby displays, meeting room screens, KPI dashboards, and corporate announcements.",
-    img1: "/src/assets/hero/m4.jpg",
-    img2: "/src/assets/hero/o1.jpg",
+    img: o1,
     cta: "Explore office solutions",
     path: "/industries/corporate"
   },
   {
     title: "Retail",
     desc: "Boost in-store engagement with promotional signage, interactive catalogs, digital price tags, and window displays.",
-    img1: "/src/assets/hero/m3.jpg",
-    img2: "/src/assets/hero/retail.jpg",
+    img: retail,
     cta: "Explore retail solutions",
     reverse: true,
     path: "/industries/retail"
@@ -22,16 +29,14 @@ const industries = [
   {
     title: "Hospitality & Restaurant",
     desc: "Digital menu boards, wayfinding displays, promotional screens, and in-room entertainment to elevate guest experience.",
-    img1: "/src/assets/hero/r1.jpg",
-    img2: "/src/assets/hero/r2.jpg",
+    img: r2,
     cta: "Explore hospitality solutions",
     path: "/industries/restaurant"
   },
   {
     title: "Manufacturing",
     desc: "Real-time production dashboards, safety alerts, quality metrics, and operational KPIs displayed across factory floors.",
-    img1: "/src/assets/hero/m1.jpg",
-    img2: "/src/assets/hero/man.jpg",
+    img: man,
     cta: "Explore manufacturing solutions",
     reverse: true,
     path: "/industries/manufacturing"
@@ -39,16 +44,14 @@ const industries = [
   {
     title: "Healthcare",
     desc: "Queue management systems, wayfinding signage, patient education screens, and digital notice boards across facilities.",
-    img1: "/src/assets/hero/m2.jpg",
-    img2: "/src/assets/hero/h1.jpg",
+    img: h1,
     cta: "Explore healthcare solutions",
     path: "/industries/hospital"
   },
   {
     title: "Transportation",
     desc: "Real-time arrival/departure information, digital wayfinding, emergency alerts, and advertising displays for transit hubs.",
-    img1: "/src/assets/hero/t1.jpg",
-    img2: "/src/assets/hero/a1.jpg",
+    img: a1,
     cta: "Explore transportation solutions",
     reverse: true,
     path: "/industries/transportation"
@@ -56,16 +59,14 @@ const industries = [
   {
     title: "Education",
     desc: "Digital notice boards, campus navigation screens, classroom displays, and event communication for institutions.",
-    img1: "/src/assets/hero/e2.jpg",
-    img2: "/src/assets/hero/e1.jpg",
+    img: e1,
     cta: "Explore education solutions",
     path: "/industries/education"
   },
   {
     title: "Personal Care",
     desc: "Promote services, offers, and wellness content using visually engaging digital screens inside salons and clinics.",
-    img1: "/src/assets/hero/b2.jpg",
-    img2: "/src/assets/hero/b1.jpg",
+    img: b1,
     cta: "Explore personal care solutions",
     reverse: true,
     path: "/industries/personalcare"
@@ -73,58 +74,19 @@ const industries = [
   {
     title: "Fitness",
     desc: "Motivational content, workout programs, achievements, and digital branding inside gyms and fitness centers.",
-    img1: "/src/assets/hero/g2.jpg",
-    img2: "/src/assets/hero/g1.jpg",
+    img: g1,
     cta: "Explore fitness solutions",
     path: "/industries/fitness"
   },
   {
     title: "Banking & Finance",
     desc: "Engage customers with digital promotions, financial updates, service information, and real-time announcements.",
-    img1: "/src/assets/hero/ba1.jpg",
-    img2: "/src/assets/hero/bank1.jpg",
+    img: bank1,
     cta: "Explore financial solutions",
     reverse: true,
     path: "/industries/banking"
   }
 ]
-
-// Smooth auto image slider
-const ImageSlider = ({ img1, img2, title }) => {
-  const [showFirst, setShowFirst] = useState(true)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowFirst(prev => !prev)
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  return (
-    <div className="relative overflow-hidden rounded-3xl shadow-xl aspect-[4/3]">
-      <img
-        src={img1}
-        alt={title}
-        className={`absolute inset-0 w-full h-full object-cover
-          transition-all duration-[1600ms] ease-in-out
-          ${showFirst ? "opacity-100 scale-100" : "opacity-0 scale-105"}
-        `}
-      />
-
-      <img
-        src={img2}
-        alt={title}
-        className={`absolute inset-0 w-full h-full object-cover
-          transition-all duration-[1600ms] ease-in-out
-          ${showFirst ? "opacity-0 scale-105" : "opacity-100 scale-100"}
-        `}
-      />
-
-      <div className="absolute inset-0 bg-black/10" />
-    </div>
-  )
-}
 
 const Industries = () => {
   return (
@@ -146,11 +108,14 @@ const Industries = () => {
           >
             <div className={item.reverse ? "md:order-2" : ""}>
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-gray-800 bg-black">
-                <ImageSlider
-                  img1={item.img1}
-                  img2={item.img2}
-                  title={item.title}
-                />
+                <div className="relative overflow-hidden rounded-3xl shadow-xl aspect-[4/3]">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/10" />
+                </div>
               </div>
             </div>
 
@@ -175,7 +140,6 @@ const Industries = () => {
           </div>
         ))}
       </div>
-      
 
     </div>
   )
