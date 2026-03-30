@@ -231,7 +231,7 @@ export default function StartAdvertising() {
             </h1>
 
             <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-xl">
-              Reach millions through A2K's network of <b>10,000+ digital kiosks and displays</b> placed
+              Reach millions through A2K's network of <b>1000+ digital kiosks and displays</b> placed
               in corporate offices, retail stores, restaurants, transport hubs, hospitals, and
               educational institutions — with <b>real-time content updates</b> and <b>targeted audience reach</b>.
             </p>
@@ -256,9 +256,9 @@ export default function StartAdvertising() {
              {/* Stats */}
   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
     {[
-      { val: "10K+", label: "Active Screens" },
-      { val: "35+", label: "Cities" },
-      { val: "50M+", label: "Daily Views" },
+      { val: "160+", label: "Active Screens" },
+      { val: "4+", label: "Metro Cities" },
+      { val: "1M+", label: "Daily Views" },
     ].map((stat, index) => (
       <div
         key={index}

@@ -455,7 +455,7 @@ export default function Home({ isAdminMode = false }) {
                 <p className="text-sm text-slate-600">Industrial Rated</p>
               </div>
               <div className="bg-gradient-to-br from-white to-slate-50 backdrop-blur border border-slate-300 rounded-2xl px-6 py-5 shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
-                <p className="text-2xl font-bold text-slate-900">10,000+</p>
+                <p className="text-2xl font-bold text-slate-900">840+</p>
                 <p className="text-sm text-slate-600">Installations</p>
               </div>
               <div className="bg-gradient-to-br from-white to-slate-50 backdrop-blur border border-slate-300 rounded-2xl px-6 py-5 shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
@@ -642,9 +642,9 @@ export default function Home({ isAdminMode = false }) {
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               {[
-                { val: "10K+", label: "Active Screens" },
-                { val: "35+", label: "Cities" },
-                { val: "50M+", label: "Daily Views" },
+                { val: "160+", label: "Active Screens" },
+                { val: "4+", label: "Metro Cities" },
+                { val: "1M+", label: "Daily Views" },
               ].map((stat, index) => (
                 <div
                   key={index}
