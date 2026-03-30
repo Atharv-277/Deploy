@@ -939,10 +939,10 @@ export default function Home({ isAdminMode = false }) {
           {/* Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
             {[
-              { number: "10K+", label: "Installations", icon: <FaBuilding /> },
+              { number: "840+", label: "Installations", icon: <FaBuilding /> },
               { number: "150+", label: "Clients", icon: <FaUsers /> },
-              { number: "35+", label: "Cities", icon: <FaMapMarkerAlt /> },
-              { number: "99%", label: "Satisfaction", icon: <FaStar /> },
+              { number: "4+", label: "Metro Cities", icon: <FaMapMarkerAlt /> },
+              { number: "100%", label: "Satisfaction", icon: <FaStar /> },
             ].map((item, index) => (
               <motion.div
                 key={index}
